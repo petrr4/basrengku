@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Page</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="../css/contact.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">
+                <img src="../assets/icon.jpg" alt="Logo" />
+            </a>
+
+            <nav class="navbar">
+                <a href="home.php">home</a>
+                <a href="#about">about</a>
+                <a href="cart.php">product</a>
+                <a href="#review">review</a>
+                <a href="contact.html">contact</a>
+            </nav>
+
+            <div class="icons">
+                <a href="cart.php" class="fas fa-shopping-cart"></a>
+            </div>
+        </header>
+        
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>Contact</span> Us </h1>
+        
+        <div class="container">
+            <div class="contact-box">
+                <div class="left"></div>
+                <div class="right">
+                    <form action="contact.php" method="POST">
+                    <h2>Contact Admin</h2>
+                    <input type="text" class="field" name="nama" placeholder="Your Name">
+                    <input type="text" class="field" name="email" placeholder="Your Email">
+                    <input type="number" class="field" name="phone" placeholder="Phone">
+                    <input type="number" class="field" name="rate" placeholder="Rate(1-5)">
+                    <textarea placeholder="Message" class="field" name="pesan"></textarea>
+                    <button href="contact.php" class="btn" name="btngo">Send To Admin</button>
+                </form>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    </body>
+    </html>

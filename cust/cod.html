@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="button"],
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="button"]:hover,
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <script>
+        function getKodePesanan() {
+            var kode_pesanan = "";
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    kode_pesanan = this.responseText;
+                    document.getElementById("kode_pesanan").value = kode_pesanan;
+                }
+            };
+            xhttp.open("GET", "get_kode_pesanan.php", true);
+            xhttp.send();
+        }
+    </script>
+</head>
+<body>
+    <form action="konfirmasi_bayar.php" method="post">
+        <h2>Konfirmasi Pembayaran</h2>
+        <label for="kode_pesanan">Kode Pesanan:</label>
+        <input type="text" id="kode_pesanan" name="kode_pesanan" required readonly>
+        <br>
+        <input type="button" value="Dapatkan Kode Pesanan" onclick="getKodePesanan()">
+        <br>
+        <input type="submit" value="Bayar">
+    </form>
+</body>
+</html>

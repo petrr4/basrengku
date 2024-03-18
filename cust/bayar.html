@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cara Pembayaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .payment-method {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+        }
+
+        .payment-method img {
+            max-width: 100px;
+            max-height: 60px;
+            margin-right: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cara Pembayaran</h1>
+    </header>
+
+    <section>
+        <h2>Pilih Metode Pembayaran</h2>
+        
+        <div class="payment-method">
+            <div>
+                <img src="../assets/kartu-atm.png" alt="Kartu ATM">
+                <p>Kartu ATM</p>
+            </div>
+
+            <div>
+                <a href="cod.html">
+                <img src="../assets/cod.jpg" alt="COD" >
+                <p>COD (Cash on Delivery)</p>
+                </a>
+            </div>
+
+            <div>
+                <a href="bayardana.html">
+                <img src="../assets/dana.png" alt="DANA">
+                <p>DANA</p>
+                </a>
+            </div>
+
+            <div>
+                <img src="../assets/toko.png" alt="Toko Terdekat">
+                <p>Toko Terdekat</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Basrengku. All rights reserved.</p>
+    </footer>
+</body>
+</html>
